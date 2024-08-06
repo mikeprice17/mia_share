@@ -1,0 +1,27 @@
+# dbt_project.yml
+name: 'mia_share_project'
+version: '1.0'
+config-version: 2
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+analysis-paths: ["analyses"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+docs-paths: ["docs"]
+snapshot-paths: ["snapshots"]
+
+vars:
+  some_variable: 'some_value'
+
+models:
+  mia_share_project:
+    +materialized: ephemeral
+
+# This line specifies the profile to use
+profile: 'mia_share'
