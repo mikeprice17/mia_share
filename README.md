@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mia Share Project
 
 This project contains dbt models for analyzing program and student data on the Mia Share platform.
